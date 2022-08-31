@@ -1,17 +1,17 @@
 apps:
   - name: IDEA
     scheme: http
-    port: 8082
+    port: 8888
     # Working directory
     working-directory: /home/coder
     # File path to icon used in application launcher
     icon-path: /opt/idea/bin/idea.png
     # VNC server will be started by default in this image
-    command: "/opt/idea/bin/idea.sh"
+    command: "/opt/idea/bin/idea-projector.sh"
     # Array of arguments for command
     args: []
     health-check:
       http:
         scheme: "http"
         path: "/"
-        port: 8082
+        port: 8888
